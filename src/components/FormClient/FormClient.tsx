@@ -19,15 +19,21 @@ const FormClient = () => {
             <TextField
               id="outlined-basic"
               label="CNPJ*"
-              variant="outlined" />
+              variant="outlined"
+              sx={{ width: '100%' }}
+            />
             <TextField
               id="outlined-basic"
               label="Razão Social*"
-              variant="outlined" />
+              variant="outlined"
+              sx={{ width: '100%' }}
+            />
             <TextField
               id="outlined-basic"
               label="Nome Fantasia*"
-              variant="outlined" />
+              variant="outlined"
+              sx={{ width: '100%' }}
+            />
           </div>
 
           <div className='form-client-container-body-address'>
@@ -39,23 +45,33 @@ const FormClient = () => {
               <TextField
                 id="outlined-basic"
                 label="Logradouro"
-                variant="outlined" />
+                variant="outlined"
+                sx={{ width: '100%' }}
+              />
               <TextField
                 id="outlined-basic"
                 label="Cidade"
-                variant="outlined" />
+                variant="outlined"
+                sx={{ width: '100%' }}
+              />
               <TextField
                 id="outlined-basic"
                 label="Estado"
-                variant="outlined" />
+                variant="outlined"
+                sx={{ width: '100%' }}
+              />
               <TextField
                 id="outlined-basic"
                 label="CEP"
-                variant="outlined" />
+                variant="outlined"
+                sx={{ width: '100%' }}
+              />
               <TextField
                 id="outlined-basic"
                 label="Bairro"
-                variant="outlined" />
+                variant="outlined"
+                sx={{ width: '100%' }}
+              />
             </div>
           </div>
 
@@ -68,16 +84,27 @@ const FormClient = () => {
               <TextField
                 id="outlined-basic"
                 label="Nome do responsavel"
-                variant="outlined" />
+                variant="outlined"
+                sx={{ width: '100%' }}
+              />
               <TextField
                 id="outlined-basic"
                 label="Email do responsavel"
-                variant="outlined" />
+                variant="outlined"
+                sx={{ width: '100%' }}
+              />
               <TextField
                 id="outlined-basic"
                 label="Celular"
-                variant="outlined" />
+                variant="outlined"
+                sx={{ width: '100%' }}
+              />
             </div>
+          </div>
+
+          <div className='form-client-container-body-footer'>
+            <button>Voltar</button>
+            <button>Criar Cliente</button>
           </div>
         </div>
 

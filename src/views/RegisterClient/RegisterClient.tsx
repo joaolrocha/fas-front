@@ -1,15 +1,12 @@
 import FormClient from "../../components/FormClient/FormClient";
-import Header from "../../components/Header/Header";
+import LayoutDashboard from "../../layouts/LayoutDashboard/LayoutDashboard";
 
 export default function RegisterClient() {
   return (
-    <div className="register-client-page-container">
-      <div className="register-client-page-container-header">
-        <Header />
-      </div>
-      <div className="register-client-page-container-form">
+    <LayoutDashboard>
+      <div className="register-client-page-form">
         <FormClient />
       </div>
-    </div>
+    </LayoutDashboard>
   )
 }
