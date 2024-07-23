@@ -103,8 +103,8 @@ const FormClient = () => {
           </div>
 
           <div className='form-client-container-body-footer'>
-            <button>Voltar</button>
-            <button>Criar Cliente</button>
+            <button className='button-system voltar'>Voltar</button>
+            <button className='button-system aceitar'>Criar Cliente</button>
           </div>
         </div>
 

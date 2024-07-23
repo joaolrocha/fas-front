@@ -89,5 +89,23 @@
         padding: 0rem 1rem;
       }
     }
+
+    &-footer {
+      // width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      padding: 1rem 1rem;
+    }
   }
+}
+
+.voltar {
+  background-color: #E43425;
+  color: #fff;
+}
+
+.aceitar {
+  background-color: #004E64;
+  color: #fff;
 }
