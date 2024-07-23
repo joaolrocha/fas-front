@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import FormClient from './components/FormClient/FormClient';
 import Login from './views/Login/Login';
 
-import './_globalStyles.scss'
+import './_globalStyles.scss';
+import RegisterClient from './views/RegisterClient/RegisterClient';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
 
         <Route
           path='/registerclient'
-          element={<FormClient />}
+          element={<RegisterClient />}
         />
 
       </Routes>
