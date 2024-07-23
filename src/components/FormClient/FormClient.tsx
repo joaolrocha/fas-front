@@ -65,7 +65,18 @@ const FormClient = () => {
             </div>
 
             <div className='form-client-container-body-contacts-inputs'>
-              
+              <TextField
+                id="outlined-basic"
+                label="Nome do responsavel"
+                variant="outlined" />
+              <TextField
+                id="outlined-basic"
+                label="Email do responsavel"
+                variant="outlined" />
+              <TextField
+                id="outlined-basic"
+                label="Celular"
+                variant="outlined" />
             </div>
           </div>
         </div>
