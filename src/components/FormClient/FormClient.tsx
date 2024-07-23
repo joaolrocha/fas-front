@@ -1,7 +1,14 @@
-import { TextField } from '@mui/material'
-import './_formCliente.scss'
+// src/components/FormClient/FormClient.tsx
+import { TextField } from '@mui/material';
+
+import './_formCliente.scss';
+import useFormClient from './useFormClient';
+import { cnpjMask } from '../../utils/inputMasks/cnpjMask';
+import { phoneMask } from '../../utils/inputMasks/phoneMask';
 
 const FormClient = () => {
+  const { formState, handleChange, handleCepChange, handleSubmit } = useFormClient();
+
   return (
     <div className='form-client-container'>
       <div className='form-client-container-title'>
@@ -9,7 +16,6 @@ const FormClient = () => {
       </div>
 
       <div className='form-client-container-body'>
-
         <div className='form-client-container-body-PJ'>
           <div className='form-client-container-body-PJ-title'>
             <h2>Dados de pessoa juridica</h2>
@@ -17,22 +23,28 @@ const FormClient = () => {
 
           <div className='form-client-container-body-PJ-inputs'>
             <TextField
-              id="outlined-basic"
+              id="cnpj"
               label="CNPJ*"
               variant="outlined"
               sx={{ width: '100%' }}
+              value={cnpjMask(formState.cnpj)}
+              onChange={handleChange}
             />
             <TextField
-              id="outlined-basic"
+              id="razaoSocial"
               label="Razão Social*"
               variant="outlined"
               sx={{ width: '100%' }}
+              value={formState.razaoSocial}
+              onChange={handleChange}
             />
             <TextField
-              id="outlined-basic"
+              id="nomeFantasia"
               label="Nome Fantasia*"
               variant="outlined"
               sx={{ width: '100%' }}
+              value={formState.nomeFantasia}
+              onChange={handleChange}
             />
           </div>
 
@@ -43,34 +55,44 @@ const FormClient = () => {
 
             <div className='form-client-container-body-address-inputs'>
               <TextField
-                id="outlined-basic"
-                label="Logradouro"
-                variant="outlined"
-                sx={{ width: '100%' }}
-              />
-              <TextField
-                id="outlined-basic"
-                label="Cidade"
-                variant="outlined"
-                sx={{ width: '100%' }}
-              />
-              <TextField
-                id="outlined-basic"
-                label="Estado"
-                variant="outlined"
-                sx={{ width: '100%' }}
-              />
-              <TextField
-                id="outlined-basic"
+                id="cep"
                 label="CEP"
                 variant="outlined"
                 sx={{ width: '100%' }}
+                value={formState.cep}
+                onChange={handleCepChange}
               />
               <TextField
-                id="outlined-basic"
+                id="logradouro"
+                label="Logradouro"
+                variant="outlined"
+                sx={{ width: '100%' }}
+                value={formState.logradouro}
+                onChange={handleChange}
+              />
+              <TextField
+                id="cidade"
+                label="Cidade"
+                variant="outlined"
+                sx={{ width: '100%' }}
+                value={formState.cidade}
+                onChange={handleChange}
+              />
+              <TextField
+                id="estado"
+                label="Estado"
+                variant="outlined"
+                sx={{ width: '100%' }}
+                value={formState.estado}
+                onChange={handleChange}
+              />
+              <TextField
+                id="bairro"
                 label="Bairro"
                 variant="outlined"
                 sx={{ width: '100%' }}
+                value={formState.bairro}
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -82,35 +104,40 @@ const FormClient = () => {
 
             <div className='form-client-container-body-contacts-inputs'>
               <TextField
-                id="outlined-basic"
+                id="nomeResponsavel"
                 label="Nome do responsavel"
                 variant="outlined"
                 sx={{ width: '100%' }}
+                value={formState.nomeResponsavel}
+                onChange={handleChange}
               />
               <TextField
-                id="outlined-basic"
+                id="emailResponsavel"
                 label="Email do responsavel"
                 variant="outlined"
                 sx={{ width: '100%' }}
+                value={formState.emailResponsavel}
+                onChange={handleChange}
               />
               <TextField
-                id="outlined-basic"
+                id="celular"
                 label="Celular"
                 variant="outlined"
                 sx={{ width: '100%' }}
+                value={phoneMask(formState.celular)}
+                onChange={handleChange}
               />
             </div>
           </div>
 
           <div className='form-client-container-body-footer'>
             <button className='button-system voltar'>Voltar</button>
-            <button className='button-system aceitar'>Criar Cliente</button>
+            <button className='button-system aceitar' onClick={handleSubmit}>Criar Cliente</button>
           </div>
         </div>
-
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FormClient
+export default FormClient;
