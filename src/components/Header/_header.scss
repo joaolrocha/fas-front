@@ -1,0 +1,24 @@
+.header-component-container {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+
+  &-logo {
+    width: 10%;
+
+    & img {
+      height: 100px;
+    }
+  }
+
+  &-options {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: flex-end;
+
+    & p {
+      padding-right: 1rem;
+    }
+  }
+}
