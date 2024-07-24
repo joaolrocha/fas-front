@@ -1,0 +1,26 @@
+.content-waiting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #191919;
+  margin-left: 16rem;
+  gap: 5rem;
+  color: #1D7882;
+}
+
+.saudacao {
+  font-size: 3rem;
+  text-align: center;
+  line-height: 3rem;
+  font-family: New Order;
+}
+
+.spinner {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
