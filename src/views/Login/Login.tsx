@@ -1,7 +1,12 @@
 import { TextField } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 import './_login.scss'
 
 export default function Login() {
+  const navigate = useNavigate()
+  const handleClick = () => {
+    navigate('/dashboard')
+  }
   return (
     <div className='login-view-container'>
       <div className='login-view-content'>
@@ -29,7 +34,7 @@ export default function Login() {
         </div>
 
         <div className='login-view-content-footer'>
-          <button className='button-system login'>Login</button>
+          <button onClick={handleClick} className='button-system login'>Login</button>
         </div>
       </div>
     </div>

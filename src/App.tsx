@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './views/Login/Login';
 
 import './_globalStyles.scss';
+import Dashboard from './views/Dashboard/Dashboard';
 import RegisterClient from './views/RegisterClient/RegisterClient';
 
 function App() {
@@ -11,6 +12,11 @@ function App() {
         <Route
           path='/'
           element={<Login />}
+        />
+
+        <Route
+          path='/dashboard'
+          element={<Dashboard />}
         />
 
         <Route
