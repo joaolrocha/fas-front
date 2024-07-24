@@ -24,7 +24,7 @@ const Header: React.FC = () => {
       </div>
       <div className="header-component-container-options">
         <p onClick={() => handleNavigation('/')}>Inicio</p>
-        <p onClick={() => handleNavigation('/registerclient')}>Cliente</p>
+        <p onClick={() => handleNavigation('/listclients')}>Cliente</p>
         <p onClick={() => handleNavigation('/project')}>Projeto</p>
         <p onClick={() => handleNavigation('/resource')}>Recurso</p>
         <p onClick={() => handleNavigation('/projection')}>Projeção</p>
@@ -34,7 +34,7 @@ const Header: React.FC = () => {
       </div>
       <div className={`mobile-menu ${isMobileMenuOpen ? 'show' : ''}`}>
         <p onClick={() => handleNavigation('/')}>Inicio</p>
-        <p onClick={() => handleNavigation('/registerclient')}>Cliente</p>
+        <p onClick={() => handleNavigation('/listclients')}>Cliente</p>
         <p onClick={() => handleNavigation('/project')}>Projeto</p>
         <p onClick={() => handleNavigation('/resource')}>Recurso</p>
         <p onClick={() => handleNavigation('/projection')}>Projeção</p>

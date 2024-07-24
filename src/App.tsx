@@ -3,6 +3,7 @@ import Login from './views/Login/Login';
 
 import './_globalStyles.scss';
 import Dashboard from './views/Dashboard/Dashboard';
+import ListClients from './views/ListClients/ListClients';
 import RegisterClient from './views/RegisterClient/RegisterClient';
 
 function App() {
@@ -17,6 +18,11 @@ function App() {
         <Route
           path='/dashboard'
           element={<Dashboard />}
+        />
+
+        <Route
+          path='/listclients'
+          element={<ListClients />}
         />
 
         <Route

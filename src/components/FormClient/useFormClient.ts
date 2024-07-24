@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { cepInfosType, requestCEPInfos } from '../../services/viacep.service';
 import { cepMask } from '../../utils/inputMasks/cepMask';
+import { useNavigate } from 'react-router-dom';
 
 interface FormClientState {
   cnpj: string;
@@ -18,6 +19,7 @@ interface FormClientState {
 }
 
 const useFormClient = () => {
+  const navigate = useNavigate()
   const [formState, setFormState] = useState<FormClientState>({
     cnpj: '',
     razaoSocial: '',
@@ -69,11 +71,16 @@ const useFormClient = () => {
     console.log('Form submitted:', formState);
   };
 
+  const handleBackNav = () => {
+    navigate('/listclients')
+  }
+
   return {
     formState,
     handleChange,
     handleCepChange,
     handleSubmit,
+    handleBackNav
   };
 };
 

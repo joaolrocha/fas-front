@@ -1,13 +1,13 @@
 // src/components/FormClient/FormClient.tsx
 import { TextField } from '@mui/material';
 
-import './_formCliente.scss';
-import useFormClient from './useFormClient';
 import { cnpjMask } from '../../utils/inputMasks/cnpjMask';
 import { phoneMask } from '../../utils/inputMasks/phoneMask';
+import './_formCliente.scss';
+import useFormClient from './useFormClient';
 
 const FormClient = () => {
-  const { formState, handleChange, handleCepChange, handleSubmit } = useFormClient();
+  const { formState, handleChange, handleCepChange, handleSubmit, handleBackNav } = useFormClient();
 
   return (
     <div className='form-client-container'>
@@ -131,7 +131,7 @@ const FormClient = () => {
           </div>
 
           <div className='form-client-container-body-footer'>
-            <button className='button-system voltar'>Voltar</button>
+            <button className='button-system voltar' onClick={handleBackNav}>Voltar</button>
             <button className='button-system aceitar' onClick={handleSubmit}>Criar Cliente</button>
           </div>
         </div>

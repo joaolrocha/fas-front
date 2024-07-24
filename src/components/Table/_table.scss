@@ -1,0 +1,61 @@
+#table-container {
+    width: 100%;
+    height: 100%;
+    // position: relative;
+    &::-webkit-scrollbar {
+        width: 12px; 
+    }
+    &::-webkit-scrollbar-track {
+        background: #E8E8E8;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #1D7882;
+        border-radius: 20px;
+        border: 3px solid #E8E8E8;
+    }
+    &-body {
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+        
+    }
+    &-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: self-end;
+        // position: absolute;
+        // bottom: 0;
+        // left: 0;
+        width: 100%;
+        // margin-bottom: 0.3rem;
+        & .Mui-selected {
+            background-color: transparent;
+            border: 1px solid var(--1-padro-cores-sim, #1D7882);
+            border-radius: 50%;
+        }  
+        & .MuiPaginationItem-page {
+            color: var(--1-padro-cores-cinza-texto, #333B3E);
+            text-align: center;
+            font-family: New Order;
+            font-size: 0.9375rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }            
+        & .MuiPaginationItem-page:hover {
+            background-color: transparent;
+            border: 2px solid var(--1-padro-cores-sim, #1D7882);
+            border-radius: 50%;
+        } 
+        .css-g2z002-MuiSvgIcon-root-MuiPaginationItem-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            flex-shrink: 0;
+            color: #1D7882
+        }
+        .css-10w330c-MuiButtonBase-root-MuiPaginationItem-root:hover {
+            background-color: transparent;
+        }
+    }
+    
+}
