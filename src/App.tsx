@@ -4,6 +4,7 @@ import Login from './views/Login/Login';
 import './_globalStyles.scss';
 import Dashboard from './views/Dashboard/Dashboard';
 import ListClients from './views/ListClients/ListClients';
+import ListProjects from './views/ListProjects/ListProjects';
 import RegisterClient from './views/RegisterClient/RegisterClient';
 
 function App() {
@@ -28,6 +29,11 @@ function App() {
         <Route
           path='/registerclient'
           element={<RegisterClient />}
+        />
+
+        <Route
+          path='/listprojects'
+          element={<ListProjects />}
         />
 
       </Routes>
