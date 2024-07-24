@@ -6,6 +6,7 @@ import Dashboard from './views/Dashboard/Dashboard';
 import ListClients from './views/ListClients/ListClients';
 import ListProjects from './views/ListProjects/ListProjects';
 import RegisterClient from './views/RegisterClient/RegisterClient';
+import RegisterProject from './views/RegisterProject/RegisterProject';
 
 function App() {
   return (
@@ -34,6 +35,11 @@ function App() {
         <Route
           path='/listprojects'
           element={<ListProjects />}
+        />
+
+        <Route
+          path='/registerprojects'
+          element={<RegisterProject />}
         />
 
       </Routes>

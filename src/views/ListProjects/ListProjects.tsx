@@ -14,7 +14,7 @@ export default function ListProjects() {
 
 
   const handleNavigate = () => {
-    navigate('/registerclient')
+    navigate('/registerprojects')
   }
 
 
@@ -128,7 +128,7 @@ export default function ListProjects() {
         <div className="list-projects-content">
           <div className="list-projects-content-header">
             <h2>Lista de projetos</h2>
-            <button className="button-system listprojects">
+            <button className="button-system listprojects" onClick={handleNavigate}>
               Adicionar projetos
             </button>
           </div>
