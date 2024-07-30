@@ -24,8 +24,44 @@
   }
 }
 
+.table-options-buttons {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.icons-table {
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.preview {
+  background-color: #1aa1b9;
+  padding: 0.4rem;
+
+}
+
+.edit {
+  background-color: #fec000;
+  padding: 0.4rem;
+
+}
+
+.delete {
+  background-color: #D43944;
+  padding: 0.4rem;
+}
+
+.treding {
+  background-color: #0179FE;
+  padding: 0.4rem;
+}
 
 .listprojects {
   background-color: navy;
   color: #fff;
 }
+
