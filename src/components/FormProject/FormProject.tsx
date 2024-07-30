@@ -2,6 +2,8 @@ import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, TextField
 import { useState } from "react";
 import DateTextField from "../DateTextfield/DateTextfield";
 
+import './_formProject.scss';
+
 export default function FormProject() {
   const [age, setAge] = useState('');
 
@@ -104,6 +106,18 @@ export default function FormProject() {
             </FormControl>
 
           </div>
+          <div className="form-project-content-body-4">
+            <DateTextField
+              label="Orçamento total"
+            />
+            <DateTextField
+              label="Valor hora"
+            />
+          </div>
+        </div>
+        <div className="form-project-content-footer">
+          <button className="button-system projectvoltar">Voltar</button>
+          <button className="button-system projectconfirmar">Confirmar</button>
         </div>
       </div>
     </div>
