@@ -3,14 +3,19 @@ import { useState } from "react";
 import DateTextField from "../DateTextfield/DateTextfield";
 
 import './_formProject.scss';
+import { useNavigate } from "react-router-dom";
 
 export default function FormProject() {
+  const navigate = useNavigate()
   const [age, setAge] = useState('');
 
   const handleChange = (event: SelectChangeEvent) => {
     setAge(event.target.value as string);
   };
 
+  const handleBack = () => {
+    navigate('/listprojects')
+  }
 
   return (
     <div className="form-project-container">
@@ -116,7 +121,7 @@ export default function FormProject() {
           </div>
         </div>
         <div className="form-project-content-footer">
-          <button className="button-system projectvoltar">Voltar</button>
+          <button className="button-system projectvoltar" onClick={handleBack}>Voltar</button>
           <button className="button-system projectconfirmar">Confirmar</button>
         </div>
       </div>

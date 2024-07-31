@@ -9,8 +9,9 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import PreviewIcon from '@mui/icons-material/Preview';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import ModalDetailsProject from "../../components/ModalDetailsProject/ModalDetailsProject";
 
-interface Project {
+export interface Project {
   id: number;
   descricao: string;
   dataInicio: string;
@@ -26,10 +27,20 @@ export default function ListProjects() {
   const navigate = useNavigate();
   const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(1);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const rowsPerPage = 7;
 
   const handleNavigate = () => {
     navigate('/registerprojects');
+  }
+
+
+  const handleViewProject = (project: Project) => {
+    setSelectedProject(project);
+  }
+
+  const handleCloseModal = () => {
+    setSelectedProject(null);
   }
 
   const titleColumns: (string | { label: string; width?: string })[] = [
@@ -89,7 +100,7 @@ export default function ListProjects() {
       label: 'Ações',
       format: (value) => (
         <div className="table-options-buttons">
-          <button className="icons-table preview" onClick={() => alert(`View ${value.id}`)}><PreviewIcon /></button>
+          <button className="icons-table preview" onClick={()=> {handleViewProject(value)}}><PreviewIcon /></button>
           <button className="icons-table edit" onClick={() => alert(`Edit ${value.id}`)}><EditIcon /></button>
           <button className="icons-table delete" onClick={() => alert(`Delete ${value.id}`)}><DeleteIcon /></button>
           <button className="icons-table treding" onClick={() => alert(`Projection ${value.id}`)}><TrendingUpIcon /></button>
@@ -163,6 +174,9 @@ export default function ListProjects() {
             <TableComponent TableProps={TableProps} />
           </div>
 
+          {selectedProject && (
+            <ModalDetailsProject project={selectedProject} onClose={handleCloseModal} />
+          )}
         </div>
       </div>
     </LayoutDashboard>
