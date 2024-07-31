@@ -1,20 +1,30 @@
 import React from 'react';
-import { Project } from '../../views/ListProjects/ListProjects';
-import './_modalDetailsProject.scss';
+import './_modalCreateProjection.scss';
+
+interface Project {
+  id: number;
+  descricao: string;
+  dataInicio: string;
+  dataTermino: string;
+  tipo: string;
+  cliente: string;
+  gerente: string;
+  status: string;
+}
 
 interface ModalProps {
   project: Project | null;
   onClose: () => void;
 }
 
-const ModalDetailsProject: React.FC<ModalProps> = ({ project, onClose }) => {
+const ModalCreateProjection: React.FC<ModalProps> = ({ project, onClose }) => {
   if (!project) return null;
 
   return (
     <div className="modal-overlay">
       <div className="modal-content">
         <div className='modal-projects-header'>
-          <h2>Detalhes do projeto</h2>
+          <h2>Criar projeção para o projeto {project.descricao}</h2>
           <button className="modal-close-button" onClick={onClose}>X</button>
         </div>
         <div className='modal-projects-group1'>
@@ -63,4 +73,4 @@ const ModalDetailsProject: React.FC<ModalProps> = ({ project, onClose }) => {
   );
 };
 
-export default ModalDetailsProject;
+export default ModalCreateProjection;

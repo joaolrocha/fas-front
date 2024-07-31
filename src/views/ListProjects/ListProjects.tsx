@@ -9,6 +9,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import PreviewIcon from '@mui/icons-material/Preview';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import ModalCreateProjection from "../../components/ModalCreateProjection/ModalCreateProjection";
 import ModalDetailsProject from "../../components/ModalDetailsProject/ModalDetailsProject";
 
 export interface Project {
@@ -28,6 +29,7 @@ export default function ListProjects() {
   const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(1);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [selectedProjectionProject, setSelectedProjectionProject] = useState<Project | null>(null);
   const rowsPerPage = 7;
 
   const handleNavigate = () => {
@@ -39,8 +41,13 @@ export default function ListProjects() {
     setSelectedProject(project);
   }
 
+  const handleProjection = (project: Project) => {
+    setSelectedProjectionProject(project);
+  }
+
   const handleCloseModal = () => {
     setSelectedProject(null);
+    setSelectedProjectionProject(null);
   }
 
   const titleColumns: (string | { label: string; width?: string })[] = [
@@ -100,10 +107,10 @@ export default function ListProjects() {
       label: 'Ações',
       format: (value) => (
         <div className="table-options-buttons">
-          <button className="icons-table preview" onClick={()=> {handleViewProject(value)}}><PreviewIcon /></button>
+          <button className="icons-table preview" onClick={() => { handleViewProject(value) }}><PreviewIcon /></button>
           <button className="icons-table edit" onClick={() => alert(`Edit ${value.id}`)}><EditIcon /></button>
           <button className="icons-table delete" onClick={() => alert(`Delete ${value.id}`)}><DeleteIcon /></button>
-          <button className="icons-table treding" onClick={() => alert(`Projection ${value.id}`)}><TrendingUpIcon /></button>
+          <button className="icons-table treding" onClick={() => handleProjection(value)}><TrendingUpIcon /></button> 
         </div>
       ),
       width: '10%',
@@ -111,7 +118,7 @@ export default function ListProjects() {
   ];
 
   const mockData: Project[] = [
-    { id: 1, descricao: 'Project 1', dataInicio: '2024-01-01', dataTermino: '2024-12-31', tipo: 'Type A', cliente: 'Client X', gerente: 'Manager 1', status: 'Active' },
+    { id: 1, descricao: 'TOTVS', dataInicio: '2024-01-01', dataTermino: '2024-12-31', tipo: 'Type A', cliente: 'Client X', gerente: 'Manager 1', status: 'Active' },
     { id: 2, descricao: 'Project 2', dataInicio: '2024-02-01', dataTermino: '2024-11-30', tipo: 'Type B', cliente: 'Client Y', gerente: 'Manager 2', status: 'Completed' },
     { id: 3, descricao: 'Project 3', dataInicio: '2024-03-01', dataTermino: '2024-10-31', tipo: 'Type C', cliente: 'Client Z', gerente: 'Manager 3', status: 'Pending' },
     { id: 4, descricao: 'Project 4', dataInicio: '2024-04-01', dataTermino: '2024-09-30', tipo: 'Type D', cliente: 'Client A', gerente: 'Manager 4', status: 'Active' },
@@ -176,6 +183,9 @@ export default function ListProjects() {
 
           {selectedProject && (
             <ModalDetailsProject project={selectedProject} onClose={handleCloseModal} />
+          )}
+          {selectedProjectionProject && (
+            <ModalCreateProjection project={selectedProjectionProject} onClose={handleCloseModal} />
           )}
         </div>
       </div>
