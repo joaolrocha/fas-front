@@ -14,7 +14,7 @@ const ModalDetailsProject: React.FC<ModalProps> = ({ project, onClose }) => {
     <div className="modal-overlay">
       <div className="modal-content">
         <div className='modal-projects-header'>
-          <h2>Project Details</h2>
+          <h2>Detalhes do projeto</h2>
           <button className="modal-close-button" onClick={onClose}>X</button>
         </div>
         <div className='modal-projects-group1'>

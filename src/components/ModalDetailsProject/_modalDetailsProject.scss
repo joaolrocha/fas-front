@@ -13,6 +13,7 @@ z-index: 1000;
 
 .modal-content {
 background: #fff;
+height: 40rem;
 padding: 2rem;
 border-radius: 8px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -25,8 +26,158 @@ position: relative;
 background: none;
 border: none;
 font-size: 1.5rem;
-position: absolute;
-top: 1rem;
-right: 1rem;
 cursor: pointer;
+}
+
+.modal-projects-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  font-family: New Order;
+}
+
+.modal-projects-group1 {
+  display: flex;
+  // justify-content: space-between;
+  padding-top: 2rem;
+
+  &-id {
+    width: 30%;
+
+    & h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: New Order;
+    }
+
+    & p {
+      font-size: 1rem;
+      font-weight: 400;
+      font-family: New Order;
+    }
+  }
+
+  &-descricao {
+    width: 70%;
+
+    & h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: New Order;
+    }
+
+    & p {
+      font-size: 1rem;
+      font-weight: 400;
+      font-family: New Order;
+    }
+  }
+}
+
+.modal-projects-group2 {
+  display: flex;
+  // justify-content: space-between;
+  padding-top: 2rem;
+
+  &-inicio {
+    width: 30%;
+
+    & h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: New Order;
+    }
+
+    & p {
+      font-size: 1rem;
+      font-weight: 400;
+      font-family: New Order;
+    }
+  }
+
+  &-termino {
+    width: 30%;
+
+    & h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: New Order;
+    }
+
+    & p {
+      font-size: 1rem;
+      font-weight: 400;
+      font-family: New Order;
+    }
+  }
+
+  &-tipo {
+    width: 20%;
+
+    & h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: New Order;
+    }
+
+    & p {
+      font-size: 1rem;
+      font-weight: 400;
+      font-family: New Order;
+    }
+  }
+  &-cliente {
+    width: 20%;
+
+    & h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: New Order;
+    }
+
+    & p {
+      font-size: 1rem;
+      font-weight: 400;
+      font-family: New Order;
+    }
+  }
+}
+
+.modal-projects-group3 {
+  display: flex;
+  // justify-content: space-between;
+  padding-top: 2rem;
+
+  &-gerente {
+    width: 30%;
+
+    & h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: New Order;
+    }
+
+    & p {
+      font-size: 1rem;
+      font-weight: 400;
+      font-family: New Order;
+    }
+  }
+
+  &-status {
+    width: 30%;
+
+    & h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: New Order;
+    }
+
+    & p {
+      font-size: 1rem;
+      font-weight: 400;
+      font-family: New Order;
+    }
+  }
 }
