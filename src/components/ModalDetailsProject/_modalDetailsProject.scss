@@ -33,7 +33,7 @@ cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 2rem;
+  // padding-bottom: 2rem;
   font-family: New Order;
 }
 
@@ -218,4 +218,11 @@ cursor: pointer;
       font-family: New Order;
     }
   }
+}
+
+.modal-projects-group5 {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }

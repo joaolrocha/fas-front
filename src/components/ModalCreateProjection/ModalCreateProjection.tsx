@@ -1,6 +1,7 @@
-import React from 'react';
-import './_modalCreateProjection.scss';
+import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, TextField } from '@mui/material';
+import React, { useState } from 'react';
 import { Project } from '../../views/ListProjects/ListProjects';
+import './_modalCreateProjection.scss';
 
 
 interface ModalProps {
@@ -9,8 +10,15 @@ interface ModalProps {
 }
 
 const ModalCreateProjection: React.FC<ModalProps> = ({ project, onClose }) => {
-  if (!project) return null;
+  const [age, setAge] = useState('');
 
+  const handleChange = (event: SelectChangeEvent) => {
+    setAge(event.target.value as string);
+  };
+
+
+
+  if (!project) return null;
   return (
     <div className="modal-overlay">
       <div className="modal-content">
@@ -68,6 +76,42 @@ const ModalCreateProjection: React.FC<ModalProps> = ({ project, onClose }) => {
             <h2>Valor por hora:</h2>
             <p>{project.valueHour}</p>
           </div>
+        </div>
+
+        <div className='modal-projects-group5'>
+          <TextField
+            id="código"
+            label="Código"
+            variant="outlined"
+            sx={{ width: '100%' }}
+          />
+          <TextField
+            id="descrição projeto"
+            label="Descrição"
+            variant="outlined"
+            multiline={true}
+            minRows={3}
+            sx={{ width: '100%' }}
+          />
+
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">Status</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={age}
+              label="Age"
+              onChange={handleChange}
+            >
+              <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem>
+            </Select>
+          </FormControl>
+        </div>
+
+        <div className='footer-create-projection'>
+          <button className='button-system salvarprojecao'>Salvar</button>
         </div>
       </div>
     </div>
