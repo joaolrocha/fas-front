@@ -21,6 +21,8 @@ export interface Project {
   cliente: string;
   gerente: string;
   status: string;
+  budget: number;
+  valueHour: number;
 }
 
 export default function ListProjects() {
@@ -110,7 +112,7 @@ export default function ListProjects() {
           <button className="icons-table preview" onClick={() => { handleViewProject(value) }}><PreviewIcon /></button>
           <button className="icons-table edit" onClick={() => alert(`Edit ${value.id}`)}><EditIcon /></button>
           <button className="icons-table delete" onClick={() => alert(`Delete ${value.id}`)}><DeleteIcon /></button>
-          <button className="icons-table treding" onClick={() => handleProjection(value)}><TrendingUpIcon /></button> 
+          <button className="icons-table treding" onClick={() => handleProjection(value)}><TrendingUpIcon /></button>
         </div>
       ),
       width: '10%',
@@ -118,13 +120,13 @@ export default function ListProjects() {
   ];
 
   const mockData: Project[] = [
-    { id: 1, descricao: 'TOTVS', dataInicio: '2024-01-01', dataTermino: '2024-12-31', tipo: 'Type A', cliente: 'Client X', gerente: 'Manager 1', status: 'Active' },
-    { id: 2, descricao: 'Project 2', dataInicio: '2024-02-01', dataTermino: '2024-11-30', tipo: 'Type B', cliente: 'Client Y', gerente: 'Manager 2', status: 'Completed' },
-    { id: 3, descricao: 'Project 3', dataInicio: '2024-03-01', dataTermino: '2024-10-31', tipo: 'Type C', cliente: 'Client Z', gerente: 'Manager 3', status: 'Pending' },
-    { id: 4, descricao: 'Project 4', dataInicio: '2024-04-01', dataTermino: '2024-09-30', tipo: 'Type D', cliente: 'Client A', gerente: 'Manager 4', status: 'Active' },
-    { id: 5, descricao: 'Project 5', dataInicio: '2024-05-01', dataTermino: '2024-08-31', tipo: 'Type E', cliente: 'Client B', gerente: 'Manager 5', status: 'Completed' },
-    { id: 6, descricao: 'Project 6', dataInicio: '2024-06-01', dataTermino: '2024-07-31', tipo: 'Type F', cliente: 'Client C', gerente: 'Manager 6', status: 'Pending' },
-    { id: 7, descricao: 'Project 7', dataInicio: '2024-07-01', dataTermino: '2024-06-30', tipo: 'Type G', cliente: 'Client D', gerente: 'Manager 7', status: 'Active' },
+    { id: 1, descricao: 'TOTVS', dataInicio: '2024-01-01', dataTermino: '2024-12-31', tipo: 'Type A', cliente: 'Client X', gerente: 'Manager 1', status: 'Active', budget: 1000, valueHour: 50 },
+    { id: 2, descricao: 'Project 2', dataInicio: '2024-02-01', dataTermino: '2024-11-30', tipo: 'Type B', cliente: 'Client Y', gerente: 'Manager 2', status: 'Completed', budget: 1000, valueHour: 50 },
+    { id: 3, descricao: 'Project 3', dataInicio: '2024-03-01', dataTermino: '2024-10-31', tipo: 'Type C', cliente: 'Client Z', gerente: 'Manager 3', status: 'Pending', budget: 1000, valueHour: 50 },
+    { id: 4, descricao: 'Project 4', dataInicio: '2024-04-01', dataTermino: '2024-09-30', tipo: 'Type D', cliente: 'Client A', gerente: 'Manager 4', status: 'Active', budget: 1000, valueHour: 50 },
+    { id: 5, descricao: 'Project 5', dataInicio: '2024-05-01', dataTermino: '2024-08-31', tipo: 'Type E', cliente: 'Client B', gerente: 'Manager 5', status: 'Completed', budget: 1000, valueHour: 50 },
+    { id: 6, descricao: 'Project 6', dataInicio: '2024-06-01', dataTermino: '2024-07-31', tipo: 'Type F', cliente: 'Client C', gerente: 'Manager 6', status: 'Pending', budget: 1000, valueHour: 50 },
+    { id: 7, descricao: 'Project 7', dataInicio: '2024-07-01', dataTermino: '2024-06-30', tipo: 'Type G', cliente: 'Client D', gerente: 'Manager 7', status: 'Active', budget: 1000, valueHour: 50 },
   ];
 
   const TableProps = {

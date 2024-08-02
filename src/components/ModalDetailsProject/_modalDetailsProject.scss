@@ -181,3 +181,41 @@ cursor: pointer;
     }
   }
 }
+
+.modal-projects-group4 {
+  display: flex;
+  // justify-content: space-between;
+  padding-top: 2rem;
+
+  &-budget {
+    width: 30%;
+
+    & h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: New Order;
+    }
+
+    & p {
+      font-size: 1rem;
+      font-weight: 400;
+      font-family: New Order;
+    }
+  }
+
+  &-valueHour {
+    width: 30%;
+
+    & h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: New Order;
+    }
+
+    & p {
+      font-size: 1rem;
+      font-weight: 400;
+      font-family: New Order;
+    }
+  }
+}

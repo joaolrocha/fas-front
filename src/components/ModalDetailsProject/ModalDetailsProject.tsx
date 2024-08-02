@@ -58,6 +58,17 @@ const ModalDetailsProject: React.FC<ModalProps> = ({ project, onClose }) => {
             <p>{project.status}</p>
           </div>
         </div>
+
+        <div className='modal-projects-group4'>
+          <div className='modal-projects-group4-budget'>
+            <h2>Orçamento:</h2>
+            <p>{project.budget}</p>
+          </div>
+          <div className='modal-projects-group4-valueHour'>
+            <h2>Valor por hora:</h2>
+            <p>{project.valueHour}</p>
+          </div>
+        </div>
       </div>
     </div>
   );

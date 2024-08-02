@@ -1,16 +1,7 @@
 import React from 'react';
 import './_modalCreateProjection.scss';
+import { Project } from '../../views/ListProjects/ListProjects';
 
-interface Project {
-  id: number;
-  descricao: string;
-  dataInicio: string;
-  dataTermino: string;
-  tipo: string;
-  cliente: string;
-  gerente: string;
-  status: string;
-}
 
 interface ModalProps {
   project: Project | null;
@@ -66,6 +57,16 @@ const ModalCreateProjection: React.FC<ModalProps> = ({ project, onClose }) => {
           <div className='modal-projects-group3-status'>
             <h2>Status:</h2>
             <p>{project.status}</p>
+          </div>
+        </div>
+        <div className='modal-projects-group4'>
+          <div className='modal-projects-group4-budget'>
+            <h2>Orçamento:</h2>
+            <p>{project.budget}</p>
+          </div>
+          <div className='modal-projects-group4-valueHour'>
+            <h2>Valor por hora:</h2>
+            <p>{project.valueHour}</p>
           </div>
         </div>
       </div>
