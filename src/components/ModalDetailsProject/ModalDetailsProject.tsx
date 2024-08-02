@@ -1,0 +1,77 @@
+import React from 'react';
+import { Project } from '../../views/ListProjects/ListProjects';
+import './_modalDetailsProject.scss';
+
+interface ModalProps {
+  project: Project | null;
+  onClose: () => void;
+}
+
+const ModalDetailsProject: React.FC<ModalProps> = ({ project, onClose }) => {
+  if (!project) return null;
+
+  return (
+    <div className="modal-overlay">
+      <div className="modal-content">
+        <div className='modal-projects-header'>
+          <h2>Detalhes do projeto</h2>
+          <button className="modal-close-button" onClick={onClose}>X</button>
+        </div>
+        <div className='modal-projects-group1'>
+          <div className='modal-projects-group1-id'>
+            <h2>ID do projeto</h2>
+            <p>{project.id}</p>
+          </div>
+          <div className='modal-projects-group1-descricao'>
+            <h2>Descrição:</h2>
+            <p>{project.descricao}</p>
+          </div>
+        </div>
+
+        <div className='modal-projects-group2'>
+          <div className='modal-projects-group2-inicio'>
+            <h2>Data de inicio:</h2>
+            <p>{project.dataInicio}</p>
+          </div>
+          <div className='modal-projects-group2-termino'>
+            <h2>Data de termino:</h2>
+            <p>{project.dataTermino}</p>
+          </div>
+
+          <div className='modal-projects-group2-tipo'>
+            <h2>Tipo:</h2>
+            <p>{project.tipo}</p>
+          </div>
+          <div className='modal-projects-group2-cliente'>
+            <h2>Cliente:</h2>
+            <p>{project.cliente}</p>
+          </div>
+        </div>
+
+        <div className='modal-projects-group3'>
+          <div className='modal-projects-group3-gerente'>
+            <h2>Gerente:</h2>
+            <p>{project.gerente}</p>
+          </div>
+          <div className='modal-projects-group3-status'>
+            <h2>Status:</h2>
+            <p>{project.status}</p>
+          </div>
+        </div>
+
+        <div className='modal-projects-group4'>
+          <div className='modal-projects-group4-budget'>
+            <h2>Orçamento:</h2>
+            <p>{project.budget}</p>
+          </div>
+          <div className='modal-projects-group4-valueHour'>
+            <h2>Valor por hora:</h2>
+            <p>{project.valueHour}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ModalDetailsProject;
