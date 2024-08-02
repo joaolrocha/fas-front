@@ -27,7 +27,7 @@ const Header: React.FC = () => {
         <p onClick={() => handleNavigation('/listclients')}>Cliente</p>
         <p onClick={() => handleNavigation('/listprojects')}>Projeto</p>
         <p onClick={() => handleNavigation('/resource')}>Recurso</p>
-        <p onClick={() => handleNavigation('/projection')}>Projeção</p>
+        {/* <p onClick={() => handleNavigation('/projection')}>Projeção</p> */}
       </div>
       <div className="hamburger-menu" onClick={toggleMobileMenu}>
         &#9776; {/* Unicode for hamburger icon */}
@@ -37,7 +37,7 @@ const Header: React.FC = () => {
         <p onClick={() => handleNavigation('/listclients')}>Cliente</p>
         <p onClick={() => handleNavigation('/listprojects')}>Projeto</p>
         <p onClick={() => handleNavigation('/resource')}>Recurso</p>
-        <p onClick={() => handleNavigation('/projection')}>Projeção</p>
+        {/* <p onClick={() => handleNavigation('/projection')}>Projeção</p> */}
       </div>
     </div>
   );

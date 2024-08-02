@@ -108,7 +108,7 @@ export default function ListClients() {
           <div className="list-clients-content-header">
             <h2>Lista de clientes</h2>
 
-            <button onClick={handleNavigate} className="button-system listclient">cadastrar cliente </button>
+            <button onClick={handleNavigate} className="button-system listclient">Cadastrar cliente </button>
           </div>
 
           <div className="list-clients-content-table">
