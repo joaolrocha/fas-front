@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TableComponent, { Column } from "../../components/Table/Table";
+import LayoutDashboard from "../../layouts/LayoutDashboard/LayoutDashboard";
+
+import './_listFeatures.scss';
 
 export default function ListFeatures() {
   const navigate = useNavigate()
@@ -10,7 +13,7 @@ export default function ListFeatures() {
 
 
   const handleNavigate = () => {
-    navigate('/registerclient')
+    navigate('/registerfeature')
   }
 
 
@@ -98,18 +101,20 @@ export default function ListFeatures() {
     heightTable,
   };
   return (
-    <div className="list-features-container">
-      <div className="list-features-content">
-        <div className="list-features-content-header">
-          <h2>Lista de recursos</h2>
+    <LayoutDashboard>
+      <div className="list-features-container">
+        <div className="list-features-content">
+          <div className="list-features-content-header">
+            <h2>Lista de recursos</h2>
 
-          <button className="button-system listfeatures">Cadastrar recursos </button>
-        </div>
+            <button onClick={handleNavigate} className="button-system listfeatures">Cadastrar recursos </button>
+          </div>
 
-        <div className="list-features-content-table">
-          <TableComponent TableProps={TableProps} />
+          <div className="list-features-content-table">
+            <TableComponent TableProps={TableProps} />
+          </div>
         </div>
       </div>
-    </div>
+    </LayoutDashboard>
   )
 }

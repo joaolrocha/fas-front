@@ -4,6 +4,7 @@ import Login from './views/Login/Login';
 import './_globalStyles.scss';
 import Dashboard from './views/Dashboard/Dashboard';
 import ListClients from './views/ListClients/ListClients';
+import ListFeatures from './views/ListFeatures/ListFeatures';
 import ListProjects from './views/ListProjects/ListProjects';
 import RegisterClient from './views/RegisterClient/RegisterClient';
 import RegisterProject from './views/RegisterProject/RegisterProject';
@@ -40,6 +41,11 @@ function App() {
         <Route
           path='/registerprojects'
           element={<RegisterProject />}
+        />
+
+        <Route
+          path='/listfeatures'
+          element={<ListFeatures />}
         />
 
       </Routes>
