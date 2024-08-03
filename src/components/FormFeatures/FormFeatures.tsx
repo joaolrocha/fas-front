@@ -1,5 +1,8 @@
 import { TextField } from "@mui/material";
 
+
+import './_formFeatures.scss';
+
 export default function FormFeatures() {
   return (
     <div className="form-features-container">

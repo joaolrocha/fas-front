@@ -2,8 +2,8 @@ import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, TextField
 import { useState } from "react";
 import DateTextField from "../DateTextfield/DateTextfield";
 
-import './_formProject.scss';
 import { useNavigate } from "react-router-dom";
+import './_formProject.scss';
 
 export default function FormProject() {
   const navigate = useNavigate()
