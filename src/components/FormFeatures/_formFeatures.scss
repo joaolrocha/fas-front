@@ -32,9 +32,55 @@
       gap: 1rem;
     }
 
+    &-title2 {
+      font-family: New Order;
+    }
+
     &-2 {
       display: flex;
       gap: 1rem;
     }
+
+
+    &-title3 {
+      font-family: New Order;
+    }
+
+    &-3 {
+      display: flex;
+      gap: 1rem;
+    }
+
+    &-title4 {
+      font-family: New Order;
+    }
+
+    &-4 {
+      display: flex;
+      gap: 1rem;
+    }
+
+    &-title5 {
+      font-family: New Order;
+    }
+
+    &-5{
+      display: flex;
+      gap: 1rem;
+    }
+
+    &-6{
+      display: flex;
+      gap: 1rem;
+    }
   }
+
+
+  &-footer {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 1rem;
+  }
+  
 }

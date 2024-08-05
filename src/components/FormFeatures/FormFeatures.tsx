@@ -140,30 +140,62 @@ export default function FormFeatures() {
           </div>
           <div className="form-features-content-body-5">
             <TextField
-              id="Custo hora"
-              label="Custo hora"
+              id="CNPJ"
+              label="CNPJ"
               variant="outlined"
               sx={{ width: '100%' }}
             />
             <TextField
-              id="Banco"
-              label="Banco"
+              id="Numero contrato"
+              label="Numero Contrato"
               variant="outlined"
               sx={{ width: '100%' }}
             />
             <TextField
-              id="Agencia"
-              label="Agência"
+              id="Razão Social"
+              label="Razão Social"
               variant="outlined"
               sx={{ width: '100%' }}
             />
             <TextField
-              id="Conta"
-              label="Conta"
+              id="Nome Fantasia"
+              label="Nome Fantasia"
               variant="outlined"
               sx={{ width: '100%' }}
             />
           </div>
+
+          <div className="form-features-content-body-6">
+            <TextField
+              id="endereco"
+              label="Endereço empresarial"
+              variant="outlined"
+              sx={{ width: '100%' }}
+            />
+            <TextField
+              id="Bairro empresarial"
+              label="Bairro Empresarial"
+              variant="outlined"
+              sx={{ width: '100%' }}
+            />
+            <TextField
+              id="Estado empresarial"
+              label="Estado Empresarial"
+              variant="outlined"
+              sx={{ width: '100%' }}
+            />
+            <TextField
+              id="Cep empresarial"
+              label="CEP Empresarial"
+              variant="outlined"
+              sx={{ width: '100%' }}
+            />
+          </div>
+        </div>
+
+        <div className="form-features-content-footer">
+          <button className="button-system voltar">voltar</button>
+          <button className="button-system cadastrar">criar recurso</button>
         </div>
       </div>
     </div>
