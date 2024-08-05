@@ -74,6 +74,96 @@ export default function FormFeatures() {
               sx={{ width: '100%' }}
             />
           </div>
+
+          <div className="form-features-content-body-title3">
+            <p>Dados de contato</p>
+          </div>
+          <div className="form-features-content-body-3">
+            <TextField
+              id="Telefone"
+              label="Telefone"
+              variant="outlined"
+              sx={{ width: '100%' }}
+            />
+            <TextField
+              id="Celular"
+              label="Celular"
+              variant="outlined"
+              sx={{ width: '100%' }}
+            />
+            <TextField
+              id="email particular"
+              label="Email particular"
+              variant="outlined"
+              sx={{ width: '100%' }}
+            />
+            <TextField
+              id="Email Profissional"
+              label="Email profissional"
+              variant="outlined"
+              sx={{ width: '100%' }}
+            />
+          </div>
+
+          <div className="form-features-content-body-title4">
+            <p>Dados bancarios</p>
+          </div>
+          <div className="form-features-content-body-4">
+            <TextField
+              id="Custo hora"
+              label="Custo hora"
+              variant="outlined"
+              sx={{ width: '100%' }}
+            />
+            <TextField
+              id="Banco"
+              label="Banco"
+              variant="outlined"
+              sx={{ width: '100%' }}
+            />
+            <TextField
+              id="Agencia"
+              label="Agência"
+              variant="outlined"
+              sx={{ width: '100%' }}
+            />
+            <TextField
+              id="Conta"
+              label="Conta"
+              variant="outlined"
+              sx={{ width: '100%' }}
+            />
+          </div>
+
+          <div className="form-features-content-body-title5">
+            <p>Dados empresariais</p>
+          </div>
+          <div className="form-features-content-body-5">
+            <TextField
+              id="Custo hora"
+              label="Custo hora"
+              variant="outlined"
+              sx={{ width: '100%' }}
+            />
+            <TextField
+              id="Banco"
+              label="Banco"
+              variant="outlined"
+              sx={{ width: '100%' }}
+            />
+            <TextField
+              id="Agencia"
+              label="Agência"
+              variant="outlined"
+              sx={{ width: '100%' }}
+            />
+            <TextField
+              id="Conta"
+              label="Conta"
+              variant="outlined"
+              sx={{ width: '100%' }}
+            />
+          </div>
         </div>
       </div>
     </div>
