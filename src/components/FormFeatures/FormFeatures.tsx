@@ -1,9 +1,15 @@
 import { TextField } from "@mui/material";
 
 
+import { useNavigate } from "react-router-dom";
 import './_formFeatures.scss';
 
 export default function FormFeatures() {
+  const navigate = useNavigate()
+
+  const handleBackForm = () => {
+    navigate('/listfeatures')
+  }
   return (
     <div className="form-features-container">
       <div className="form-features-content">
@@ -194,7 +200,7 @@ export default function FormFeatures() {
         </div>
 
         <div className="form-features-content-footer">
-          <button className="button-system voltar">voltar</button>
+          <button className="button-system voltar" onClick={handleBackForm}>voltar</button>
           <button className="button-system cadastrar">criar recurso</button>
         </div>
       </div>
