@@ -12,7 +12,7 @@ import RegisterProject from './views/RegisterProject/RegisterProject';
 
 function App() {
   return (
-    <BrowserRouter basename='/fas-front/build'>
+    <BrowserRouter>
       <Routes>
         <Route
           path='/'
