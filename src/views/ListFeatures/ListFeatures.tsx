@@ -13,7 +13,7 @@ export default function ListFeatures() {
 
 
   const handleNavigate = () => {
-    navigate('/registerfeature')
+    navigate('/registerfeatures')
   }
 
 

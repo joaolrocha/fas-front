@@ -7,6 +7,7 @@ import ListClients from './views/ListClients/ListClients';
 import ListFeatures from './views/ListFeatures/ListFeatures';
 import ListProjects from './views/ListProjects/ListProjects';
 import RegisterClient from './views/RegisterClient/RegisterClient';
+import RegisterFeatures from './views/RegisterFeatures/RegisterFeatures';
 import RegisterProject from './views/RegisterProject/RegisterProject';
 
 function App() {
@@ -46,6 +47,11 @@ function App() {
         <Route
           path='/listfeatures'
           element={<ListFeatures />}
+        />
+
+        <Route
+          path='/registerfeatures'
+          element={<RegisterFeatures />}
         />
 
       </Routes>
